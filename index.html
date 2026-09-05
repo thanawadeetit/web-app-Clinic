@@ -31,6 +31,12 @@
     </style>
 </head>
 <body>
-    <iframe src="https://script.google.com/macros/s/AKfycbyvivCpiYHyjnMC3aQD9-evmqPTlKCt6XyPZYgr6CDHQ-yNKh8DiupI0aPlJMbUMrmevA/exec"></iframe>
+    <iframe id="app-iframe"></iframe>
+
+    <script>
+        const gasUrl = "https://script.google.com/macros/s/AKfycbyvivCpiYHyjnMC3aQD9-evmqPTlKCt6XyPZYgr6CDHQ-yNKh8DiupI0aPlJMbUMrmevA/exec";
+        const queryString = window.location.search;
+        document.getElementById('app-iframe').src = gasUrl + queryString;
+    </script>
 </body>
 </html>
